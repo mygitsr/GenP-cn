@@ -23,7 +23,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           # List all v* directories in root
-          VERSIONS=$(ls -d v*/ 2>/dev/null | sed 's|/||' || true)
+          VERSIONS=$(ls -d s*/ 2>/dev/null | sed 's|/||' || true)
 
           if [ -z "$VERSIONS" ]; then
             echo "No version directories found"
